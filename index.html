@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Student Dashboard</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+* { margin:0; padding:0; box-sizing:border-box; font-family:Inter; }
+
+body {
+  display:flex;
+  background:#0b1220;
+  color:white;
+}
+
+h1 {
+  margin-bottom: 25px;
+  
+  font-family: 'Inter', sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+}
+
+
+/* SIDEBAR */
+.sidebar {
+  width:260px;
+  background:#0f172a;
+  height:100vh;
+  padding:20px;
+}
+
+.sidebar h2 { margin-bottom:30px; }
+
+.sidebar a {
+  display:block;
+  padding:12px;
+  margin-bottom:8px;
+  border-radius:10px;
+  color:#94a3b8;
+  text-decoration:none;
+}
+
+.sidebar a.active,
+.sidebar a:hover {
+  background:linear-gradient(90deg,#7c3aed,#4f46e5);
+  color:white;
+}
+
+/* MAIN */
+.main {
+  flex:1;
+  padding:30px;
+}
+
+/* TOP */
+.top {
+  display:flex;
+  justify-content:space-between;
+  margin-bottom:20px;
+}
+
+.search {
+  background:#111827;
+  padding:10px;
+  border-radius:10px;
+  border:none;
+  width:300px;
+  color:white;
+}
+
+/* CARDS */
+.cards {
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+}
+
+
+
+.card {
+  background:#111827;
+  padding:20px;
+  border-radius:14px;
+}
+
+/* SECTIONS */
+.section {
+  margin-top:20px;
+  background:#111827;
+  padding:20px;
+  border-radius:14px;
+}
+
+/* HOMEWORK LIST */
+.item {
+  padding:10px 0;
+  border-bottom:1px solid #1f2937;
+}
+</style>
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+  <h2>Parayana E-Techno School</h2>
+
+  <a class="active">Dashboard</a>
+  <a href="timetable.html">Timetable</a>
+  <a href="attendance.html">Attendance</a>
+  <a href="marks.html">Marks</a>
+  <a href="homework.html">Homework</a>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+<div class="top">
+  <input class="search" placeholder="Search..." />
+  <div>👤 Jhanvi Kapoor</div>
+</div>
+
+<h1 style="text-align: center; font-family: 'Times New Roman', Times, serif;">WELCOME BACK JHANVI👋</h1>
+
+<!-- CARDS -->
+<div class="cards">
+  <div class="card">
+    Attendance<br>
+    <h2>92%</h2>
+  </div>
+
+  <div class="card">
+    Homework Pending<br>
+    <h2>3</h2>
+  </div>
+
+  <div class="card">
+    Upcoming Exams<br>
+    <h2>2</h2>
+  </div>
+
+  <div class="card">
+    Average Marks<br>
+    <h2>85%</h2>
+  </div>
+</div>
+
+<!-- TODAY TIMETABLE -->
+<div class="section">
+  <h3>Today's Classes</h3>
+
+  <div class="item">Math – 9:00 AM</div>
+  <div class="item">Science – 10:30 AM</div>
+  <div class="item">English – 12:00 PM</div>
+</div>
+
+<!-- HOMEWORK -->
+<div class="section">
+  <h3>Homework</h3>
+
+  <div class="item">Math: Exercise 5.2</div>
+  <div class="item">Science: Diagram Practice</div>
+  <div class="item">English: Essay Writing</div>
+</div>
+
+
+
+</div>
+
+</body>
+</html>

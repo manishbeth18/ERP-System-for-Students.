@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Timetable</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Inter', sans-serif;
+}
+
+body {
+  display:flex;
+  background:#0b1220;
+  color:white;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width:260px;
+  height:100vh;
+  background:#0f172a;
+  padding:20px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+
+.logo {
+  font-size:18px;
+  font-weight:600;
+  margin-bottom:30px;
+}
+
+.menu a {
+  display:block;
+  padding:12px;
+  margin-bottom:8px;
+  border-radius:10px;
+  color:#94a3b8;
+  text-decoration:none;
+  transition:0.2s;
+}
+
+.menu a.active,
+.menu a:hover {
+  background:linear-gradient(90deg,#7c3aed,#4f46e5);
+  color:white;
+}
+
+.new-btn {
+  background:linear-gradient(90deg,#7c3aed,#9333ea);
+  padding:12px;
+  border-radius:10px;
+  text-align:center;
+  margin-top:20px;
+  cursor:pointer;
+}
+
+/* MAIN */
+.main {
+  flex:1;
+  padding:25px 40px;
+}
+
+/* TOPBAR */
+.topbar {
+  display:flex;
+  justify-content:space-between;
+  margin-bottom:25px;
+}
+
+.search {
+  background:#111827;
+  padding:10px 15px;
+  border-radius:10px;
+  width:350px;
+  border:none;
+  color:white;
+}
+
+/* HEADER */
+.header h1 {
+  font-size:26px;
+}
+
+.subtitle {
+  color:#64748b;
+  margin-top:5px;
+}
+
+.controls {
+  margin-top:15px;
+  display:flex;
+  gap:10px;
+}
+
+.btn {
+  padding:10px 16px;
+  border-radius:10px;
+  border:none;
+  cursor:pointer;
+}
+
+.btn.dark {
+  background:#1e293b;
+  color:#94a3b8;
+}
+
+.btn.primary {
+  background:linear-gradient(90deg,#7c3aed,#9333ea);
+  color:white;
+}
+
+/* TIMETABLE */
+.table {
+  margin-top:25px;
+  background:#111827;
+  border-radius:16px;
+  padding:20px;
+  display:grid;
+  grid-template-columns:80px repeat(5,1fr);
+  gap:12px;
+}
+
+.day {
+  text-align:center;
+  font-weight:600;
+  color:#cbd5f5;
+}
+
+.time {
+  font-size:12px;
+  color:#64748b;
+}
+
+.cell {
+  background:#1e293b;
+  border-radius:14px;
+  padding:12px;
+  font-size:13px;
+  transition:0.2s;
+}
+
+.cell:hover {
+  transform:scale(1.03);
+}
+
+/* COLORS */
+.physics { background:#3b0764; }
+.math { background:#164e63; }
+.coding { background:#78350f; }
+.english { background:#1e293b; }
+.art { background:#0e7490; }
+
+/* STATS */
+.stats {
+  display:flex;
+  gap:20px;
+  margin-top:25px;
+}
+
+.stat {
+  flex:1;
+  background:#111827;
+  padding:20px;
+  border-radius:14px;
+  text-align:center;
+}
+
+.small {
+  color:#64748b;
+  font-size:12px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+  <div>
+    <div class="logo" style="font-size:x-large"> Parayana E-Techno School</div>
+
+    <div class="menu">
+      <a href="index.html">Dashboard</a>
+      
+      <a href="timetable.html" class="active">Timetable</a>
+      <a href="attendance.html">Attendance</a>
+      <a href="marks.html">Marks</a>
+      <a href="homework.html">Homework</a>
+    </div>
+
+    
+  </div>
+
+  <div style="font-size:12px;color:#64748b;">
+    Settings<br>Support
+  </div>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+  <!-- TOP -->
+  <div class="topbar">
+    <input class="search" placeholder="Search..." />
+    <div>👤 Jhanvi Kapoor</div>
+  </div>
+
+  <!-- HEADER -->
+  <div class="header">
+    <h1>Class Timetable</h1>
+    <div class="subtitle">Grade 10-C</div>
+
+    
+  </div>
+
+  <!-- TIMETABLE GRID -->
+  <div class="table">
+
+    <div></div>
+    <div class="table">
+
+  <div></div>
+  <div class="day">MON</div>
+  <div class="day">TUE</div>
+  <div class="day">WED</div>
+  <div class="day">THU</div>
+  <div class="day">FRI</div>
+
+  <!-- 8 AM -->
+  <div class="time">08:00</div>
+  <div class="cell math">Mathematics</div>
+  <div class="cell science">Science</div>
+  <div class="cell english">English</div>
+  <div class="cell sst">Social Science</div>
+  <div class="cell math">Mathematics</div>
+
+  <!-- 10 AM -->
+  <div class="time">10:00</div>
+  <div class="cell english">English</div>
+  <div class="cell math">Mathematics</div>
+  <div class="cell science">Science</div>
+  <div class="cell hindi">Hindi</div>
+  <div class="cell sst">Social Science</div>
+
+  <!-- 1 PM -->
+  <div class="time">13:00</div>
+  <div class="cell pe">Physical Education</div>
+  <div class="cell computer">Computer</div>
+  <div class="cell math">Mathematics</div>
+  <div class="cell science">Science</div>
+  <div class="cell art">Art</div>
+
+  <!-- 3 PM -->
+  <div class="time">15:00</div>
+  <div class="cell">Hindi</div>
+  <div class="cell sst">Social Science</div>
+  <div class="cell hindi">Hindi</div>
+  <div class="cell computer">Computer</div>
+  <div class="cell pe">Sports</div>
+
+</div>
+
+  </div>
+
+  <!-- STATS -->
+  <div class="stats">
+    <div class="stat">
+      <h2>28 Hours</h2>
+      <div class="small">Weekly Load</div>
+    </div>
+    <div class="stat">
+      <h2>9 Subjects</h2>
+      <div class="small">Active Courses</div>
+    </div>
+    <div class="stat">
+      <h2>Math Exam</h2>
+      <div class="small">Next Deadline</div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
